@@ -1,0 +1,107 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Full width */   
+}
+
+section {
+    margin: 0;
+    padding: 20px; /* Add padding for spacing */
+    max-width: 100vw; /* Prevent overflow */
+}
+
+/* Banner Section */
+header {
+    background-color: #0d1117; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 50px 20px; /* Add padding for spacing */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-family: "Bebas Neue", sans-serif; /* Font for the header */
+}
+
+/* Subheaders (h2) */
+h2 {
+    font-family: "Bebas Neue", sans-serif; /* Font for subheaders */
+    color: #2C3A47; /* Blue color for subheaders */
+    margin-bottom: 10px; /* Add spacing below subheaders */
+}
+
+/* Text (paragraphs) */
+p {
+    font-family: "PT Serif", serif; /* Font for text */
+    color: #2C3A47; /* Blue color for text */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Add spacing below paragraphs */
+}
+
+/* Styling specifically for the last section */
+.last-section {
+    background-color: #2C3A47; /* Dark background for the last section */
+    padding: 30px; /* Add extra padding for spacing */
+    border-top: 5px solid black; /* Add a black border at the top */
+    color: #F2F2F2; /* White text color */
+}
+
+.last-section h2 {
+    color: #F2F2F2; /* Ensure section title is white */
+    font-family: "Bebas Neue", sans-serif; /* Font for headers */
+    text-align: center; /* Center-align the header */
+    margin-bottom: 10px; /* Add spacing below the header */
+}
+
+.last-section p {
+    color: #F2F2F2; /* Ensure paragraph text is white */
+    font-family: "PT Serif", serif; /* Font for text */
+    text-align: justify; /* Justify the text for better readability */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Add spacing below paragraphs */
+}
+.village-sections-container {
+    display: flex; /* Arrange child elements horizontally */
+    justify-content: space-between; /* Push items to the edges */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add spacing between the columns */
+    margin-top: 20px; /* Add spacing above the container */
+}
+
+.village-section-1,
+.village-section-2 {
+    flex: 1; /* Allow the sections to take equal width */
+    max-width: 45%; /* Prevent the sections from being too wide */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.village-section-1 h3,
+.village-section-2 h3 {
+    font-family: "Bebas Neue", sans-serif; /* Font for headers */
+    color: #2C3A47; /* Blue color for headers */
+    text-align: center; /* Center the village titles */
+    margin-bottom: 10px; /* Add spacing below the title */
+}
+
+.village-section-1 p,
+.village-section-2 p {
+    font-family: "PT Serif", serif; /* Font for text */
+    text-align: justify; /* Justify the text for better readability */
+    margin: 0; /* Remove default margin */
+}
+
+.village-section-2 {
+    margin-left: auto; /* Push the entire section to the right */
+    margin-top: 0; /* Align it vertically with the first section */
+    transform: translateY(-310px); /* Slightly lift the section */
+}
+
+/* Center-align the header and paragraph for "A Tale of Two Cities" */
+.a-tale-of-two-cities {
+    text-align: center; /* Center-align the text */
+    margin: 0 auto; /* Center the block within its container */
+    max-width: 80%; /* Limit the width for better readability */
+    border: none; /* Remove any borders */
+    padding: 0; /* Remove any padding */
+}

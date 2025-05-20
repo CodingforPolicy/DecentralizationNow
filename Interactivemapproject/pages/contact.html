@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Page</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="../navbar.css"> <!-- Link to the CSS file for the navbar -->        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body class="framework-page">
+    <!--Navbar Placeholder-->
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script> <!-- Link to the navbar script -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+<section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <label for="user-email">Your Email:</label>
+        <input type="email" id="user-email" name="user_email" required>
+        
+        <label for="user-message">Your Message:</label>
+        <textarea id="user-message" name="user_message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
+<script>
+    // Initialize EmailJS
+    emailjs.init("OGBIls6kX-a9dJrrZ"); // Replace with your EmailJS user ID
+
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Send the email
+        emailjs.sendForm("service_ise3xzd", "template_s3a0mcv", this)
+            .then(function() {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message. Please try again.");
+                console.error("Error:", error);
+            });
+    });
+</script>
+</body>

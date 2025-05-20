@@ -1,0 +1,112 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&display=swap');
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between logo and nav links */
+    padding: 10px 20px; /* Add padding around the navbar */
+    background-color: #0d1117; /* Navbar background color */
+}
+
+/* Logo Section (Completely on the Left) */
+.logo-section {
+    display: flex;
+    align-items: center; /* Vertically align the triangles */
+    justify-content: flex-start; /* Align the logo to the left */
+    height: 40px; /* Match the height of the navbar text */
+    margin-right: auto; /* Push the logo to the far left */
+    padding: 0; /* Remove padding to avoid layout shifts */
+    background-color: transparent; /* Ensure no background overlaps the navbar */
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the triangles */
+    gap: 0; /* Start with no gap between triangles */
+}
+
+/* Triangles */
+.logo-container .big-triangle {
+    height: 40px; /* Match the height of the navbar text */
+    width: auto; /* Maintain aspect ratio */
+    transform: translateX(5px); /* Move the triangle to the right */
+}
+
+.logo-container .right-triangle-left, 
+.logo-container .right-triangle-right {
+    height: 40px; /* Match the height of the navbar text */
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Static Translation for Left Right Triangle 1 */ 
+.logo-container .right-triangle-left {
+    height: 40px; /* Match the height of the navbar text */
+    width: auto; /* Maintain aspect ratio */
+    transform: translateX(20.1px); /* Move the left triangle to the right */
+}
+
+/* Hover Effect: Split Right Triangle 1 and Right Triangle 2 */ 
+
+.logo-container:hover .right-triangle-right {
+    transform: translateX(5px); /* Move the right triangle to the right */
+}
+
+/* Navigation Links (Text on the Right) */
+.nav-links {
+    display: flex; /* Make the links appear side by side */
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add spacing between navigation links */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #F2F2F2; /* White text */
+    font-family: 'Bebas Neue', sans-serif; /* Font for the navbar text */
+    font-size: 1.4rem; /* Adjust font size */
+    text-transform: uppercase; /* Make text uppercase */
+    line-height: 40px; /* Match the height of the navbar */
+    transition: color 0.3s ease; /* Smooth hover animation */
+}
+
+.nav-links a:hover {
+    color: #B03030; /* Change text color on hover */
+}
+
+/* Make the logo link behave like a block element */
+.logo-link {
+    display: block; /* Ensure the entire logo section is clickable */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+/* Hidden Navbar */
+#navbar.hidden {
+    transform: translateY(-100%); /* Move navbar out of view */
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0d1117; /* Dark blue background */
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hidden Navbar */
+#navbar.hidden {
+    transform: translateY(-100%); /* Move navbar out of view */
+}
+

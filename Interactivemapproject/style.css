@@ -1,0 +1,590 @@
+/*General Styles*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&display=swap');
+
+body {
+    font-family: 'PT Serif', serif; /* Default font for normal text */
+    margin: 0;
+    padding: 0;
+    color: #F2F2F2; /* White text */
+    background-color: #0D1117; /* Primary color for the background */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Headings and Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for headers and titles */
+    color: #F2F2F2; /* White text */
+    text-transform: uppercase; /* Make headers uppercase for emphasis */
+    letter-spacing: 1px; /* Add spacing between letters */
+    margin: 0 0 20px; /* Add spacing below headings */
+}
+
+/* Links */
+a {
+    color: #B03030; /* Accent color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3B4C5A; /* Highlight color for hover */
+}
+
+/* Buttons */
+.button {
+    background-color: #B03030; /* Accent color */
+    color: #F2F2F2; /* White text */
+    border: 2px solid #B03030; /* Accent color */
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3B4C5A; /* Highlight color */
+    color: #F2F2F2; /* White text */
+}
+/* hero Section */ 
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+header h1 {
+    font-size: 2.5rem;
+    color: #F2F2F2
+}
+
+/* General Styling for Horizontal Sections */
+.horizontal-section {
+    width: 100%; /* Make the section span the full width */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add spacing between sections */
+    background-color: none; /* No background color */
+    color: #F2F2F2; /* White text */
+    text-align: center; /* Center-align the text */
+    box-shadow: none; /* No shadow */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Section Titles */
+.horizontal-section h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for titles */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+    text-transform: uppercase; /* Make the text uppercase */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#mission-section h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for titles */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+    text-transform: uppercase; /* Make the text uppercase */
+    box-sizing: border-box;
+}
+
+/* Section Paragraphs */
+.horizontal-section p,
+.advocating-text p {
+    font-family: 'PT Serif', serif; /* Font for paragraphs */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 800px; /* Limit the width of the text */
+    box-sizing: border-box;
+}
+
+#mission-section p {
+    font-family: 'PT Serif', serif; /* Font for paragraphs */
+    font-size: 1rem; /* Ensure consistent font size */
+    line-height: 1.6; /* Improve readability */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 800px; /* Limit the width of the text */
+    box-sizing: border-box;
+}
+
+/*Advocating Content*/
+.advocating {
+    grid-column: 2 / 3; /* Place in the second column*/
+    align-self: start; /* Align content at the top*/
+    text-align: left; /* Align text to the left*/
+}
+.advocating img {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px
+}
+
+/* Research Content */
+.research {
+    grid-column: 1 / 2; /* Place in the first column */ 
+    grid-row: 3 / 5; /* Place in the third row */
+    text-align: left; /*Align text to the left*/
+}
+.research img {
+    grid-column: 2 / 3; /* Place image in the second column*/ 
+    grid-row: 2 / 3; /* Place image in the first row */
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px
+}
+
+/* Mission Statement Section*/ 
+.mission-statement {
+    grid-column: 1 / 3; /* Span both columns */
+    grid-row: 1 / 2; /* Place in the first row */
+    text-align: center; /* Center text */
+    align-self: center; /* Center vertically */
+}
+.mission-statement-image {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px
+}
+
+/* Main page header */
+#main-header {
+    background-color: #0D1117; /* Secondary color */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.yellow-section {
+    background-color: #0D1117; /* Primary color */
+    color: #F2F2F2; /* White text */
+    padding: 40px;
+}
+
+.map-section {
+    background-color: #2C3A47; /* Secondary color */
+    color: #F2F2F2; /* White text */
+    padding: 20px;
+}
+
+.framework-page .section {
+    background-color: #0D1117; /* Primary color */
+    color: #F2F2F2; /* White text */
+    padding: 20px;
+    transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.yellow-section.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px; 
+    background-color: #B03030; /* Accent color */
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Map Section */
+.map-section{
+    padding: 20px;
+    background-color: #3B4C5A; /* Primary color */
+}
+#map {
+    height: 50vh; /* Adjust height to 50% of the viewport height */
+    width: 100%;
+    border: 2px solid #ccc;
+}
+
+/* Button Styles */ 
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px; 
+    background-color: #F2F2F2; /* Black box */
+    color: #2C3A47; /* White text */ 
+    text-decoration: none; 
+    font-weight: bold; 
+    border: 2px solid black; /* Black border */ 
+    border-radius: 10px; /* Rounded edges */ 
+    text-align: center; /* Center text */
+    transition: background-color .03s ease; /* Add hover effect */ 
+}
+
+.button:hover {
+    background-color: #333; /* Darker shade on hover */ 
+}
+
+/* Initial State */ 
+#map{
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly move the map downward */ 
+    transition: opacity 1.5s ease, transform 1.5s ease 0.5s; /* Smooth transition */ 
+}
+
+/* Visible State */ 
+#map.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move back to original position */ 
+}
+
+/* For small screens (e.g., mobile and tablets) */ 
+@media screen and (max-width: 768px) {
+    .yellow-section {
+        display: flex; /* Change from grid to flex for better stacking */ 
+        flex-direction: column; /* Stack elements vertically */ 
+        gap: 20px; /* Add space between items */
+    }
+
+    .advocating, .research, .mission-statement {
+        text-align: center; /* Center-align content on smaller screens */
+        width: 100%; /* Ensure full width for content */ 
+        margin: 0 auto; /* Center content within the section */    
+    }
+
+    #map {
+        height: 50vh; /* Adjust height for mobile */ 
+        
+    }
+}
+
+/* Default grid layout for large screens */ 
+.yellow-section { 
+    grid-template-rows: auto auto; /* Adjust rows dynmaically */ 
+    padding-bottom: 40px; /* Add bottom padding to prevent overlap */ 
+}
+
+/* Framework Page Styles */
+body.framework-page {
+    margin: 0;
+    font-family: "PT Serif", serif;
+    line-height: 1.6;
+    background-color: #0D1117; /* Primary color */
+    color: #F2F2F2; /* White text */
+}
+
+/* Section Styles */
+.framework-page .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+    color: white;
+    transition: background-color 1.5s ease, color 1.5s ease; /* Smooth and subtle transitions */
+}
+
+/* Section 1 */
+.framework-page #section1 {
+    background-color: #0D1117; /* Dark blue */
+    color: #f2f2f2; /* White text */
+}
+
+/* Section 2 */
+.framework-page #section2 {
+    background-color: #2C3A47; /* Black */
+    color: #f2f2f2; /* Light gray text for contrast */
+}
+
+/* Section 3 */
+.framework-page #section3 {
+    background-color: #3B4C5A; /* Dark gray */
+    color: #f2f2f2; /* White text */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .framework-page .section {
+        padding: 10px;
+    }
+
+    .framework-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .framework-page p {
+        font-size: 1rem;
+    }
+}
+
+/* General Arrow Styles */
+.arrow {
+    font-size: 3rem; /* Large arrow size */
+    color: white; /* White arrow */
+    text-align: center;
+    margin-top: 20px; /* Add spacing above the arrow */
+    position: relative; /* Position the arrow relative to its normal flow */
+    left: 0; /* Reset horizontal alignment */
+    transform: none; /* No transformations */
+    opacity: 1; /* Fully visible */
+}
+
+/* Arrow 1 (Section 1 to Section 2) */
+#arrow1 {
+    font-size: 3.5rem; /* Slightly larger arrow */
+    color: white; /* White arrow */
+    margin-top: 30px; /* Add more spacing above the arrow */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade-in effect */
+}
+
+/* Arrow 1 Visible State */
+#arrow1.visible {
+    opacity: 1; /* Fully visible */
+}
+
+/* Arrow 2 (Section 2 to Section 3) */
+#arrow2 {
+    font-size: 3rem; /* Default size */
+    color: whit; /* Light blue arrow */
+    margin-top: 20px; /* Default spacing */
+}
+
+/* Map Title and Subtext */
+.map-title {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the text */
+    color: #F2F2F2; /* White text */
+}
+
+.map-title h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for titles */
+    font-size: 2rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+    color: #F2F2F2; /* White text */
+}
+
+.map-title p {
+    font-family: 'PT Serif', serif; /* Font for normal text */
+    font-size: 1rem; /* Adjust font size */
+    margin: 5px 0 0; /* Add spacing above and below */
+    color: #F2F2F2; /* White text */
+}
+
+.contact-form {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 500px;
+    color: #F2F2F2;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #2C3A47;
+    border-radius: 5px;
+    background-color: #0D1117;
+    color: #F2F2F2;
+}
+
+.contact-form button {
+    background-color: #B03030;
+    color: #F2F2F2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3B4C5A;
+}
+
+/* Bank Icon Styling */
+.bank-icon {
+    display: block; /* Ensures the image behaves like a block element */
+    max-width: 100px; /* Set the maximum width to 100px */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 20px auto; /* Center the image and add spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    filter: brightness(0) invert(1); /* Make the image white */
+}
+
+/* Banner Section */
+#banner-section {
+    background-color: #0D1117; /* Secondary color for the banner */
+    color: #F2F2F2; /* White text */
+    text-align: center; /* Center the text */
+    padding: 50px 20px; /* Add padding for spacing */
+}
+
+/* Banner Title */
+.banner-title {
+    font-family: 'Bebas Neue', sans-serif; /* Font for the title */
+    font-size: 3rem; /* Large font size for the title */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
+    margin: 0; /* Remove default margin */
+}
+
+/* Advocating Section */
+#advocating-section {
+    margin: 20px 20px 40px 20px; /* Add top, right, bottom, and left margins */
+    padding: 20px; /* Add padding inside the section */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Mission Section */
+#mission-section {
+    margin: 20px 20px 40px 20px; /* Add top, right, bottom, and left margins */
+    padding: 20px; /* Add padding inside the section */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Research Section */
+#research-section {
+    margin: 20px 20px 40px 20px; /* Add top, right, bottom, and left margins */
+    padding: 20px; /* Add padding inside the section */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Container for Image and Text */
+.advocating-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Space between image and text */
+    align-items: flex-start; /* Align items at the top */
+    gap: 40px; /* Add spacing between the image and text */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* Add padding to the sides */
+}
+
+/* Image Styling */
+.advocating-image {
+    float: left; /* Align the image to the left */
+    max-width: 500px; /* Set the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin: 0; /* Remove margin */
+    
+}
+
+img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Text Styling */
+.advocating-text {
+    flex: 1; /* Allow the text to take up the remaining space */
+    text-align: right; /* Align text to the right */
+    margin: 0; /* Remove margin */
+}
+
+.advocating-text h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for the title */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+}
+
+.advocating-text p {
+    font-family: 'PT Serif', serif; /* Font for the paragraph */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+html, body {
+    width: 100%; /* Ensure the body spans the full width of the viewport */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Research Section Container */
+.research-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Push the image to the left and text to the right */
+    align-items: flex-start; /* Align items at the top */
+    gap: 40px; /* Add spacing between the image and text */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0; /* Remove padding from the container */
+}
+
+/* Research Image Styling */
+.research-image {
+    max-width: 500px; /* Set the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin: 0; /* Remove any extra margins */
+}
+
+/* Research Text Styling */
+.research-text {
+    flex: 1; /* Allow the text to take up the remaining space */
+    text-align: right; /* Align the text to the right */
+    margin: 0; /* Remove any extra margins */
+}
+
+.research-text h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for the title */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+.research-text p {
+    font-family: 'PT Serif', serif; /* Font for the paragraph */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Mission Statement Section Container */
+.mission-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Push the text to the left and image to the right */
+    align-items: flex-start; /* Align items at the top */
+    gap: 40px; /* Add spacing between the text and image */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0; /* Remove padding from the container */
+}
+
+/* Mission Statement Image Styling */
+.mission-image {
+    max-width: 500px; /* Set the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin: 0; /* Remove any extra margins */
+}
+
+/* Mission Statement Text Styling */
+.mission-text {
+    flex: 1; /* Allow the text to take up the remaining space */
+    text-align: left; /* Align the text to the left */
+    margin: 0; /* Remove any extra margins */
+}
+
+.mission-text h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Font for the title */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+.mission-text p {
+    font-family: 'PT Serif', serif; /* Font for the paragraph */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Banner Section */
+header {
+    background-color: #2C3A47; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 50px 20px;
+}

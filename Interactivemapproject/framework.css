@@ -1,0 +1,98 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Top Section */
+header {
+    background-color: #0d1117; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 50px 20px; /* Add padding for spacing */
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-family: "Bebas Neue", sans-serif; /* Font for the header */
+}
+
+/* Framework Section */
+#framework-section {
+    background-color: #FFFFFF; /* White background */
+    color: #2C3A47; /* Blue text color */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin: 20px auto; /* Center the section horizontally */
+    width: 90%; /* Constrain the width to 90% of the viewport */
+    max-width: 1200px; /* Limit the maximum width */
+    font-family: "PT-serif", serif; /* Font for the section */
+}
+
+header h1 {
+    font-size: 3rem; /* Set the font size to 3rem */
+    margin: 0; /* Remove any default margin */
+    line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+/* Paragraph Styling */
+p {
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0; /* Add spacing below paragraphs */
+}
+
+#framework-section h2 {
+    font-size: 1.6 rem; /* Large font size for the section title */
+    margin-bottom: 20px; /* Add spacing below the title */
+    text-align: left; /* Center the section title */
+    color: black; /* Dark blue for the title */
+}
+
+#framework-section p {
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    text-align: justify; /* Justify text for better readability */
+    color: black; /* Blue text color */
+}
+
+/* Solution Section */
+#solution-section {
+    background-color: #FFFFFF; /* White background */
+    color: black; /* Blue text color */
+    padding: 60px 20px; /* Add padding for spacing */
+    margin: 20px auto; /* Center the section horizontally */
+    width: 90%; /* Constrain the width to 90% of the viewport */
+    max-width: 1200px; /* Limit the maximum width */
+    text-align: center; /* Center-align the text */
+    font-family: "PT Serif", serif; /* Font for the content */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Header Container for Side-by-Side Layout */
+.header-container {
+    display: flex; /* Use Flexbox for side-by-side alignment */
+    justify-content: center; /* Center the headers horizontally */
+    align-items: center; /* Align the headers vertically */
+    gap: 20px; /* Add spacing between the headers */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#solution-section h2 {
+    font-family: "Bebas Neue", sans-serif; /* Font for the fading header */
+    font-size: 2rem; /* Large font size for the header */
+    margin: 0; /* Remove default margin */
+    color: transparent; /* Start with transparent text */
+    transition: color 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+#solution-section h2.faded-in {
+    color: black; /* Fade in to black */
+}
+
+#solution-section h3 {
+    font-family: "Bebas Neue", sans-serif; /* Font for the static header */
+    font-size: 2rem; /* Match the font size of the fading text */
+    margin: 0; /* Remove default margin */
+    color: #B03030; /* Red text for the static header */
+}

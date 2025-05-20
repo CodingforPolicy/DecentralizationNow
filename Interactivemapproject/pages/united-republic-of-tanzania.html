@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Tanzanian Social Action Fund</title>
+        <link rel="stylesheet" href="../tanzania.css"> <!-- Link to the CSS file for the Tanzania page -->
+        <link rel="stylesheet" href="../navbar.css"> <!-- Link to the CSS file for the navbar -->
+    </head>
+    <body>
+        <!--Navbar Placeholder-->
+        <div id="navbar-container"></div> <!-- This will be replaced by the navbar script -->
+        <script src="../navbar.js"></script> <!-- Link to the navbar script -->
+
+        <!-- Page Header -->
+        <header>
+            <h1>The Tanzanian Social Action Fund</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="tanzania-content">
+            <!-- Background Section -->
+            <section class="writing-section">
+                <h2>Background</h2>
+                <p>
+                    By the turn of the millennium, Tanzania had enacted several creative reforms as they shifted from the socialist Ujamaa policies to freer markets. Part of these reforms meant reestablishing local governments, which had previously been reorganized under regional directorates in the 1970s. By 1999, village governments had been given sufficient autonomy in political and administrative. Changes in the organization of village government would set the stage for Tanzania’s Social Action Fund (TASAF) and the associated Productive Social Safety Net (PSSN) programs that would see village governments excel in improving local life outcomes. 
+                </p>
+                <!-- Publishing Section -->
+                <aside class="publishing-section">
+                    <h3>Publishing</h3>
+                    <p>Explore our publishing on the Tanzanian Social Action Fund:</p>
+                    <a href="../pdfs/decentralization_paper.pdf" target="_blank">Download PDF</a>
+                    <div class="red-line"></div>
+                </aside>
+            </section>
+
+            <!-- Program Initiative Section -->
+            <section class="writing-section">
+                <h2>Program Initiative</h2>
+                <p>
+                    At the time of its creation, The Tanzanian Social Action Fund was not a novel initiative. Throughout the latter half of the 20th century, the World Bank frequently attempted to introduce development programs across Sub-Saharan Africa with the usage of the participatory rapid appraisal framework. Despite these initiatives, programs lacked sustainability, and more than 40% of initiated projects failed after funding stopped. It was in this context that in 2000, Tanzania began the implementation of TASAF. The initiation of the program aligned closely with the Millenium Development Goals and the push by the World Bank for improving conditions in developing countries. The World Bank was thus a significant contributor to the funding of the program, alongside other development partners. In total $73,500,000 (USD 2000) was raised, with the funding for the program provided by the World Bank, Tanzania, and development partners at a ratio of 81:5:14. With funding secured, Tanzania began to provide transfers to village councils for usage in developing local services and infrastructure. 
+                </p>
+            </section>
+
+            <!-- Program Section -->
+            <section class="writing-section">
+                <h2>Program</h2>
+                <p>TASAF was initially rolled out modestly, with minimal villages and funding to be included in the earliest phases. Despite the limited nature of the program, villages managed to create cost effective solutions with their limited budget, which tended to be around $20,000. These early transfers were strong opportunities for the government to observe the behavior of villages and for domestic academia to provide much needed analysis and improvements to the program. Of particular surprise to Dodoma was the complete reluctance of villages to employ NGOs to assist them with development and instead, in consideration of their limited funding, opted to do it themselves. Villager determination and resourcefulness catalyzed the improvement of services and infrastructure. The World Bank commented that these “communities had demonstrated their ability to manage and account for results.” By the end of the first phase in 2005, villages had already built 1,704 sub-projects targeted towards improving services and infrastructure. Early success in TASAF encouraged the Tanzanian government to roll-out the program on a larger scale, although not without changes.</p>
+                <p>In TASAFs second phase, the Conditional Cash Transfer (CCT) program was piloted as a government transfer to protect and empower certain individuals. The responsibility for identifying dependents and handing out transfers was delegated to local communities, serving as another important test in the effectiveness of local government. The impacts of the trial programs yielded several improvements in life quality through motivating consumption and increasing school attendance. CCT is then rolled out across Tanzania as the Productive Social Safety Net (PSSN). Since its establishment, PSSN has supported 5,000,000 people—1.3 million of them being considered chronically poor.</p>
+                <p>To date, government transfers to villages have improved local service delivery and infrastructure for 2.7 million people, with PSSN transfers supporting 5 million people. The impacts of the program have been widespread and life changing for many. While TASAF displays meaningful impacts in life outcomes, it has also significantly improved the relationship between citizens and their government. The ability for local governments to create these improvements increased social license in villages and regained trust which had been lost from past centralization laws. This changing relationship is likely responsible for a greater willingness on the side of the citizenry to pay for more expensive, but higher quality, public services.</p>
+            
+                <!-- Expandable Chart Section -->
+                <div class="chart-container">
+                    <div class="line"></div>
+                    <div class="expand-ball" onclick="toggleChart()"></div>
+                    <div id="chart-section" class="hidden">
+                        <h3>Sector Breakdown of TASAF I Sub-Projects</h3>
+                        <canvas id="tasafBarChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Include Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            
+            <!-- Bar Graph Script -->
+            <script>
+                const ctx = document.getElementById('tasafBarChart').getContext('2d');
+                const tasafBarChart = new Chart(ctx, {
+                    type: 'bar', // Bar chart type
+                    data: {
+                        labels: [
+                            'Education', 'Health', 'Water', 'Road', 'Economic Infrastructure',
+                            'Environment Protection', 'Widows', 'Orphans', 'HIV/AIDS Sensitization',
+                            'Elderly', 'Disabled', 'Early Childhood Dev.'
+                        ], // Sectors
+                        datasets: [{
+                            label: 'Total Sub-Projects',
+                            data: [782, 328, 254, 204, 46, 29, 27, 15, 10, 6, 2, 1], // Values
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)', // Colors for each bar
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)',
+                                'rgba(201, 203, 207, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(201, 203, 207, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)'
+                            ],
+                            borderWidth: 1 // Border width for bars
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            },
+                            title: {
+                                display: true,
+                                text: 'Sector Breakdown of TASAF I Sub-Projects'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true // Start y-axis at 0
+                            }
+                        }
+                    }
+                });
+            
+                // Toggle Chart Visibility
+                function toggleChart() {
+                    const chartSection = document.getElementById('chart-section');
+                    chartSection.classList.toggle('hidden'); // Toggle the hidden class
+                }
+            </script>
+            </section>
+
+            <!-- Lessons in Decentralization Section -->
+            <section id="lessons-section">
+                <h2>Lessons in Decentralization</h2>
+                <p>Many government functions are devolved in Tanzania, and village governments have robust authorities to deal with political and administrative issues. Fiscal decentralization in Tanzania has been more restricted for local villages. This fact of poor fiscal autonomy has been of less importance throughout TASAF because the majority of funding came from vertical transfers to villages. The inability to tax own-source revenue streams as desired can cause issues in future sustainability. The TASAF program has, up until now, observed high sustainability. However, if when the program stops, local governments lose the ability to tax the own-source revenue streams which have been developed throughout the program, there is a high likelihood that local governments will not be able to continue the same level of service delivery.</p>
+                <p>Part of TASAFs sustainability can be owed to domestic academia’s contribution to local government methodologies during the first phase of the program. This new strategy, Opportunities and Obstacles Development (O&OD) created a participatory framework which emphasized local participatory decision making. O&OD emphasizes collective problem solving and decision making from the start, putting townsfolk in a place to choose the problems most significant to them, come up with cost effective solutions, and to request the funding necessary for their implementation.</p>
+                <p>Valuable lessons can be derived from TASAFs participatory frameworks and from the robust vertical cooperation that has enabled the central government to adequately supply and monitor development in sub-central governments. Through TASAF, Tanzania has worked at increasing vertical cooperation to improve data collection and to further the success of the program. Ultimately, the role of the central government within TASAF is irreplaceable and at the core of the program lies a healthy government that is unified around the program. Tanzania's ability to generate successful results from decentralization when the government is honest, transparent, and genuinely liable to its citizen has already been contemporarily understood. Where Tanzania deviates from the norm is in the creation of the O&OD framework which is the result of integrating academia with the larger objective. World Bank frameworks such as the PRA may have produced poor sustainability because they did not adequately fit themselves for the unique environment of the target countries. To cooperate with universities as a key stakeholder, and to incentivize them to be vanguards of improving local governance can serve not only as a catalyst for domestic research, but can help improve the necessary skills of government which may be absent from some local communities.</p>
+            </section>
+            </script>
+        </main>
+    </body>
+</html>

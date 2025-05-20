@@ -1,0 +1,170 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Banner Section */
+header {
+    background-color: #0d1117; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 50px 20px; /* Add padding for spacing */
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-family: "Bebas Neue", sans-serif; /* Font for the header */
+}
+
+/* Writing Section */
+.writing-section {
+    background-color: #ffffff; /* White background */
+    color: #2C3A47; /* Dark font color */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin: 20px auto; /* Add vertical margins and center the section */
+    width: 90%; /* Constrain the width to 90% of the viewport */
+    max-width: 1200px; /* Limit the maximum width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Lessons Section */
+#lessons-section {
+    background-color: #2C3A47; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    padding: 40px 20px; /* Add padding for spacing */
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#lessons-section h2 {
+    color: #F2F2F2; /* White text for the lessons section title */
+}
+
+/* Paragraph Styling */
+p {
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0; /* Add spacing below paragraphs */
+}
+
+/* Background Section */
+.writing-section.background-section {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items at the top */
+    background-color: #ffffff; /* White background */
+    color: #2C3A47; /* Dark font color */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin: 20px auto; /* Add vertical margins and center the section */
+    width: 90%; /* Constrain the width to 90% of the viewport */
+    max-width: 1200px; /* Limit the maximum width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Background Section Text */
+.writing-section.background-section > div {
+    flex: 2; /* Allow the text to take up more space */
+    margin-right: 20px; /* Add spacing between the text and the publishing section */
+}
+
+/* Publishing Section */
+.publishing-section {
+    flex: 1; /* Allow the publishing section to take up less space */
+    background-color: #ffffff; /* White background for publishing box */
+    border-left: 3px solid #B03030; /* Red line on the left */
+    padding: 15px;
+    max-width: 300px; /* Limit the width of the publishing box */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: left; /* Align text inside the publishing section */
+}
+
+.publishing-section h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #B03030; /* Red color for emphasis */
+    margin-bottom: 10px;
+}
+
+.publishing-section a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #B03030; /* Red color for the link */
+    text-decoration: none;
+    font-weight: normal; /* Normal weight for the link */
+}
+
+.publishing-section a:hover {
+    color: #B03030; /* keep the same color on hover */
+    font-weight: bolder; /* Make the link bolder on hover */
+}
+
+/* Highlight for "1,704 sub-projects" */
+.highlight {
+    font-weight: bold;
+    color: #B03030; /* Red color for emphasis */
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Vertical Line */
+.line {
+    width: 2px;
+    height: 380px; /* Extend the line further down */
+    background-color: #2C3A47; /* Blue color matching the font */
+    margin: 0;
+    position: absolute; /* Position it on the left margin */
+    left: -20px; /* Move it past the left margin */
+    top: -350px; /* Position it at the top of the chart container */
+}
+
+/* Expand Ball */
+.expand-ball {
+    width: 20px;
+    height: 20px;
+    background-color: #2C3A47; /* Blue color matching the font */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute; /* Position it on the left margin */
+    left: -29.5px; /* Move it past the left margin to align with the line */
+    top: 29px; /* Position it at the bottom of the extended line */
+}
+
+.expand-ball:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    margin-top: 20px;
+    text-align: left; /* Align content to the left */
+    padding-left: 50px; /* Add padding to make space for the line and ball */
+}
+
+/* Hidden Chart Section */
+#chart-section.hidden {
+    display: none;
+}
+
+#chart-section {
+    margin-top: 20px;
+}
+

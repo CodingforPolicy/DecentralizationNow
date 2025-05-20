@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Indonesia's Program for Community Empowerment</title>
+        <link rel="stylesheet" href="../indonesia.css"> <!-- Link to the CSS file for this page -->
+        <link rel="stylesheet" href="../navbar.css"> <!-- Link to the CSS file for the navbar -->
+        <script src="https://code.jscharting.com/latest/jscharting.js"></script> <!-- Include JSCharting library -->
+    </head>
+    <body>
+        <!-- Navbar Placeholder -->
+        <div id="navbar-container"></div> <!-- This will be replaced by the navbar script -->
+        <script src="../navbar.js"></script> <!-- Link to the navbar script -->
+
+        <header>
+            <h1>The Community Empowerment Program</h1>
+        </header>
+
+        <!-- Section 1: Program Primer -->
+        <section>
+            <h2>Program Primer</h2>
+            <p>The Program Nasional Pemberdayaan Masyarakat (PNPM), often translated as the Community Empowerment Program, has been Indonesia’s flagship decentralized development program since 2007. The program began humbly as the Kecamatan Development Program in 1997, where Indonesia introduced a Community-Driven Development methodology (CDD) which provided villages with large block grants to be spent on projects planned through participatory methods. The programs success saw it fully rolled out in 2007, supporting the earlier 2001 Big Bang devolution reforms passed by Indonesia. Today, PNPM supports over 70,000 villages with the CDD methodology, which hopes to continue to shift authority to municipalities while improving conditions of poverty. The PNPM program coincided with the emergence of the Post-Washington Consensus practices of the World Bank and IMF, which transitioned away from standardized market liberalization packages into supporting institutions which are essential for creating healthy markets.</p>
+        </section>
+
+        <!-- Section 2: A Tale of Two Cities -->
+        <section>
+            <section class="a-tale-of-two-cities">
+            <h2>A Tale of Two Cities</h2>
+            <p>This section highlights the organizational structure of the PNPM program and its impact on two communities: Gadingkulon and Ngadirejo.</p>
+            </section> 
+            <div id="chartDiv" style="width: 100%; height: 500px;"></div> <!-- Chart container -->
+                                                <script>
+                            // JavaScript code for the chart
+                            var palette = ['#42A467', '#A0F8AE', '#4287F5', '#FFB74D', '#FF8A65']; // Green, neutral, blue, and additional colors
+                        
+                            var points = [
+                                {
+                                    name: 'PNPM',
+                                    id: 'pnpm',
+                                    attributes: { role: 'Central Program' },
+                                    color: palette[1] // Neutral color for the central box
+                                },
+                                {
+                                    name: 'Gadingkulon',
+                                    id: 'gadingkulon',
+                                    parent: 'pnpm',
+                                    attributes: { role: 'Village' },
+                                    color: palette[0], // Green for the village
+                                    connectorLine: { radius: 140, width: 2, length: -100 } // Connects upward
+                                },
+                                {
+                                    name: 'Ngadirejo',
+                                    id: 'ngadirejo',
+                                    parent: 'pnpm',
+                                    attributes: { role: 'Village' },
+                                    color: palette[2], // Blue for the village
+                                    connectorLine: { radius: 140, width: 2, length: 100 } // Connects downward
+                                },
+                                // Boxes from Gadingkulon
+                                {
+                                    name: 'Low Education',
+                                    id: 'gadingkulon-low-education',
+                                    parent: 'gadingkulon',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[3], // Orange
+                                    connectorLine: { radius: 100, width: 2, length: -50 }
+                                },
+                                {
+                                    name: 'Agricultural Economy',
+                                    id: 'gadingkulon-agriculture',
+                                    parent: 'gadingkulon',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[3], // Orange
+                                    connectorLine: { radius: 100, width: 2, length: 0 }
+                                },
+                                {
+                                    name: 'Poverty',
+                                    id: 'gadingkulon-impoverished',
+                                    parent: 'gadingkulon',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[3], // Orange
+                                    connectorLine: { radius: 100, width: 2, length: 50 }
+                                },
+                                {
+                                    name: 'Reform Success',
+                                    id: 'gadingkulon-reform-success',
+                                    parent: ['gadingkulon-low-education', 'gadingkulon-agriculture', 'gadingkulon-impoverished'],
+                                    attributes: { role: 'Outcome' },
+                                    color: palette[0], // Green
+                                    connectorLine: { radius: 120, width: 2, length: 0 }
+                                },
+                                // Boxes from Ngadirejo
+                                {
+                                    name: 'Low Education',
+                                    id: 'ngadirejo-low-education',
+                                    parent: 'ngadirejo',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[4], // Red
+                                    connectorLine: { radius: 100, width: 2, length: -75 }
+                                },
+                                {
+                                    name: 'Agricultural Economy',
+                                    id: 'ngadirejo-agriculture',
+                                    parent: 'ngadirejo',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[4], // Red
+                                    connectorLine: { radius: 100, width: 2, length: -25 }
+                                },
+                                {
+                                    name: 'Poverty',
+                                    id: 'ngadirejo-impoverished',
+                                    parent: 'ngadirejo',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[4], // Red
+                                    connectorLine: { radius: 100, width: 2, length: 25 }
+                                },
+                                {
+                                    name: 'Large Elite Population',
+                                    id: 'ngadirejo-elite',
+                                    parent: 'ngadirejo',
+                                    attributes: { role: 'Challenge' },
+                                    color: palette[4], // Red
+                                    connectorLine: { radius: 100, width: 2, length: 75 }
+                                },
+                                {
+                                    name: 'Reform Failure',
+                                    id: 'ngadirejo-reform-failure',
+                                    parent: ['ngadirejo-low-education', 'ngadirejo-agriculture', 'ngadirejo-impoverished', 'ngadirejo-elite'],
+                                    attributes: { role: 'Outcome' },
+                                    color: palette[2], // Blue
+                                    connectorLine: { radius: 120, width: 2, length: 0 }
+                                }
+                            ];
+                        
+                            var chart = JSC.chart('chartDiv', {
+                                debug: false,
+                                type: 'organizational',
+                        
+                                /*These options will apply to all annotations including point nodes and breadcrumbs.*/
+                                defaultAnnotation: {
+                                    padding: [5, 10],
+                                    margin: [50, 0],
+                                    radius: 15
+                                },
+                        
+                                defaultTooltip_enabled: false,
+                                defaultSeries: {
+                                    mouseTracking: false,
+                                    color: 'white',
+                                    defaultPoint: {
+                                        outline_width: 0,
+                                        connectorLine: { radius: 140, width: 2 },
+                                        label: {
+                                            text: '<b>%name</b><br><span style="font-size:10px;">%role</span>',
+                                            maxWidth: 50
+                                        }
+                                    }
+                                },
+                        
+                                series: [{ points: points }]
+                            });
+                        </script>
+
+                        <!-- Section for Gadingkulon -->
+                        <div class="village-section-1">
+                            <h3>Gadingkulon</h3>
+                            <p>When first observed in 2009, Gadingkulon was primarily an agricultural village suffering from a great deal of poverty and illiteracy. Many of the residents did not complete an elementary school level education and were living in poor conditions. Despite these setbacks, the village was guided by a strong treasurer and administration which saw the completion of several projects. The first to be completed regarded water and pipes, then a kindergarten renovation, and lastly community built roads to farms which had previously been cutoff. The PNPM program worked mostly as intended in Gadingkulon, with participation being decent regarding meetings of community resources, building, and involved processes and lower in more technical meetings, which were often drawn out and boring.</p>
+                        </div>
+                        <!-- Section for Ngadirejo -->
+                        <div class="village-section-2">
+                            <h3>Ngadirejo</h3>
+                            <p>Ngadirejo had many similar starting conditions as Gadingkulon. It’s economy primarily relied on agriculture, had poor education, and widespread poverty. Despite many similarities, there was also a much higher proportion of elites living in Ngadirejo than in Gadingkulon. Many former officers and people of high position resided there, and were able to provide significant influence on the participatory system. Early projects for water infrastructure and piping failed due to lack of consideration from the constituency. Later projects for building roads failed to yield positive results, because they were constructed for the benefit of the elites in the village. Overall, there was also a lower awareness of the PNPM program across the village than there was in Gadingkulon. Ngadirejo serves as a failure of the PNPM program, a testament to how those in authority can skew and ruin participatory frameworks. Ultimately, it came down to a difference in the leadership environment. During the course of the Ngadirejo’s examination, they impeached their mayor due to corruption, further reducing trust. His impeachment did not however attenuate the pressures the elites had on the participatory system. The ultimate lesson from Ngadirejo: Local governments fail to achieve their participatory goals when the people are unable to trust them. </p>
+                        </div>
+                    </section>
+        <!-- Section 3: Lessons in Decentralization -->
+        <section class="last-section">
+            <h2>Lessons in Decentralization</h2>
+            <p>The PNPM program drew along similar lines of other decentralization development strategies, such as those used in Tanzania. However, the environment that ushered in its existence is wildly different than those of other countries with similar programs. The Big Bang reform initiatives created an explosion in administrative diversity, adding thousands of municipalities in a short period of time. The goals of PNPM were to foster a transition of powers and skills to these new municipalities. In many cases, this turned out positively such as in Gadingkulon where citizens and their leadership worked together to improve the infrastructure and services in their village. In other cases, the explosion of authority allowed for corrupt elites to gain authority and exert overwhelming force on what should’ve been a participatory method, such as in Ngadirejo.</p>
+            <p>The Tale of Two Cities is an perfect display of how powers that be can influence political institutions and how those institutions can cause a disconnect between policy and implementation. The Murdoch School seeks to bring to light the impacts which competing elites can have on political institutions, and argues that the difference between reality and policy derives itself from the notion that state institutions, which are subject to the whims of competing entities, cannot be neutral parties in the distributions of resources and will always favor those whom are most favorable to them. To oppose this, a negative pressure must be applied against these forces through private organizations of voters which, when organized, can exert stronger political pressures.</p>
+        </section>
+    </body>
+</html>

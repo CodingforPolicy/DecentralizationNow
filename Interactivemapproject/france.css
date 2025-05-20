@@ -1,0 +1,152 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar Styling */
+header {
+    background-color: #0d1117; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 20px 20px; /* Adjust padding for spacing */
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-family: "Bebas Neue", sans-serif; /* Font for the header */
+}
+
+/* Header Section */
+#page-header {
+    background-color: #0d1117; /* Dark blue background */
+    color: #F2F2F2; /* White text */
+    text-align: center;
+    padding: 60px 20px; /* Add padding for spacing */
+    font-family: "Bebas Neue", sans-serif; /* Font for the header */
+}
+
+#page-header h1 {
+    font-size: 3rem; /* Match the font size of tanzania.css */
+    margin: 0;
+    line-height: 1.2;
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Content Sections */
+.content-section {
+    background-color: #FFFFFF; /* White background */
+    color: #2C3A47; /* Dark text color */
+    padding: 50px 30px; /* Add padding for spacing */
+    margin: 30px auto; /* Center the section horizontally */
+    width: 90%; /* Constrain the width to 90% of the viewport */
+    max-width: 1200px; /* Limit the maximum width */
+    font-family: "PT Serif", serif; /* Font for the content */
+    line-height: 1.8; /* Improve readability */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-radius: 8px; /* Add rounded corners for consistency */
+}
+
+.content-section h2 {
+    font-size: 2.5rem; /* Match the font size of tanzania.css */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0D1117; /* Dark blue for section titles */
+    text-transform: uppercase; /* Make the text uppercase */
+    font-family: "Bebas Neue", sans-serif; /* Match the font style */
+}
+
+.content-section p {
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for better readability */
+    font-size: 1.1rem; /* Slightly larger font size for readability */
+    color: #2C3A47; /* Dark text color */
+}
+
+.content-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    color: #2C3A47;
+    font-size: 1.1rem; /* Match paragraph font size */
+    line-height: 1.8; /* Improve spacing between list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #page-header h1 {
+        font-size: 2.5rem; /* Adjust header size for smaller screens */
+    }
+
+    .content-section {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .content-section h2 {
+        font-size: 2rem; /* Adjust section title size for smaller screens */
+    }
+
+    .content-section p {
+        font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+    }
+}
+
+/* Sub-Headers Styling (h2) */
+.content-section h2 {
+    font-size: 2rem; /* Adjusted font size */
+    margin-bottom: 5px; /* Reduce spacing below h2 */
+    text-align: left; /* Align sub-headers to the left */
+    color: #2C3A47; /* Change sub-header color to dark blue */
+    text-transform: uppercase; /* Make the text uppercase */
+    font-family: "Bebas Neue", sans-serif; /* Match the font style */
+}
+
+/* Feature Titles (h3) */
+.feature h3 {
+    font-size: 1.5rem; /* Smaller font size for h3 */
+    margin-bottom: 10px; /* Add spacing below h3 */
+    text-align: left; /* Align h3 to the left */
+    color: #2C3A47; /* Dark blue for feature titles */
+    font-family: "Bebas Neue", sans-serif; /* Use Bebas Neue font */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+/* Paragraph Styling */
+.feature p {
+    margin-top: 0px; /* Remove top margin */
+    margin-bottom: 30px; /* Add more space between features */
+    text-align: justify; /* Justify text for better readability */
+    font-size: 1.1rem; /* Slightly larger font size for readability */
+    color: black; /* Change paragraph text color to black */
+    line-height: 1.8; /* Improve readability */
+}
+
+/* List Styling */
+.content-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    color: #2C3A47;
+    font-size: 1.1rem; /* Match paragraph font size */
+    line-height: 2; /* Increase spacing between list items */
+    margin-bottom: 20px; /* Add spacing below the list */
+}
+
+/* Feature Image Styling */
+.feature-image {
+    float: right; /* Keep the image on the right */
+    margin: 10px 0 20px 20px; /* Move the image up by using a negative top margin */
+    max-width: 250px; /* Increase the maximum width to make the image larger */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners for consistency */
+}
+
+/* Feature Image Styling */
+.feature-image {
+    float: right; /* Align the image to the right */
+    margin: 10px 0 20px 20px; /* Add spacing around the image */
+    max-width: 250px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+}
+
